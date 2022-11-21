@@ -5,6 +5,9 @@ use sok::query;
 #[command(author, version, about, long_about = None)]
 struct Args {
    query: String,
+
+   #[clap(short, long, default_value = "~/.sok", help = "Search index")]
+   index: String,
 }
 
 fn main() {
